@@ -4,7 +4,7 @@ metadata:
   name: ga-entry
 spec:
   scaleTargetRef:
-    apiversion: apps/v1
+    apivVersion: apps/v1
     kind: Deployment
     name: ga-entry
   minReplicas: 1
