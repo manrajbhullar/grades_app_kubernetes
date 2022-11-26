@@ -5,7 +5,7 @@ metadata:
   labels:
     app: ga-entry
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: ga-entry
@@ -19,3 +19,6 @@ spec:
         image: manrajbhullar/ga_entry
         ports:
         - containerPort: 8080
+        resources:
+          requests:
+            cpu: 100m
