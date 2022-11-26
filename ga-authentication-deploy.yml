@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ga-authentication
+  labels:
+    app: ga-authentication
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ga-authentication
+  template:
+    metadata:
+      labels:
+        app: ga-authentication
+    spec:
+      containers:
+      - name: authentication
+        image: manrajbhullar/ga_authentication
+        ports:
+        - containerPort: 80
