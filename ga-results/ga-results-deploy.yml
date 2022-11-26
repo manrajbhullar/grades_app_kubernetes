@@ -19,3 +19,6 @@ spec:
         image: manrajbhullar/ga_results
         ports:
         - containerPort: 8090
+        resources:
+          requests:
+            cpu: 100m

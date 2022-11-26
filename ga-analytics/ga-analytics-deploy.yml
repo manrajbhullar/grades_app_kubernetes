@@ -19,4 +19,6 @@ spec:
         image: manrajbhullar/ga_analytics
         ports:
         - containerPort: 8100
-
+        resources:
+          requests:
+            cpu: 100m
