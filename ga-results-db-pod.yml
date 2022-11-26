@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ga-results-db
+  labels:
+    app: ga-results-db
+spec:
+  containers:
+  - image: manrajbhullar/ga_results_db
+    name: results-db
+    ports:
+    - containerPort: 27017

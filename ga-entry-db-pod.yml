@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ga-entry-db
+  labels:
+    app: ga-entry-db
+spec:
+  containers:
+  - image: manrajbhullar/ga_entry_db
+    name: entry-db
+    ports:
+    - containerPort: 3306
