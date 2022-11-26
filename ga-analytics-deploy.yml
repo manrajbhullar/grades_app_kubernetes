@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ga-analytics
+  labels:
+    app: ga-analytics
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ga-analytics
+  template:
+    metadata:
+      labels:
+        app: ga-analytics
+    spec:
+      containers:
+      - name: analytics
+        image: manrajbhullar/ga_analytics
+        ports:
+        - containerPort: 8100
+

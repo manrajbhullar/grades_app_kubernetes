@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ga-entry
+  labels:
+    app: ga-entry
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ga-entry
+  template:
+    metadata:
+      labels:
+        app: ga-entry
+    spec:
+      containers:
+      - name: entry
+        image: manrajbhullar/ga_entry
+        ports:
+        - containerPort: 8080
