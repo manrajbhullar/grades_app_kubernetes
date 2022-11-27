@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: ga-entry-db-config
 data:
-  HOST: '34.123.191.186'
+  DB_HOST: '34.123.191.186'
