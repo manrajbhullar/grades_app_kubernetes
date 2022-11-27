@@ -19,6 +19,12 @@ spec:
         image: manrajbhullar/ga_results
         ports:
         - containerPort: 8090
+        env:
+        - name: DB_HOST
+          valueFrom: 
+            configMapKeyRef:
+              name: ga-results-db
+              key: DB_HOST
         resources:
           requests:
             cpu: 100m

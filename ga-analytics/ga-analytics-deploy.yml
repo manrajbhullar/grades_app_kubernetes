@@ -25,6 +25,12 @@ spec:
             configMapKeyRef:
               name: ga-entry-db
               key: DB_HOST
+        env:
+        - name: DB_HOST2
+          valueFrom: 
+            configMapKeyRef:
+              name: ga-results-db
+              key: DB_HOST
         resources:
           requests:
             cpu: 100m
