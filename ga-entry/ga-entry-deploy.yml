@@ -19,6 +19,12 @@ spec:
         image: manrajbhullar/ga_entry
         ports:
         - containerPort: 8080
+        env:
+        - name: DB_HOST
+          valueFrom: 
+            configMapKeyRef:
+              name: ga-entry-config
+              key: DB_HOST
         resources:
           requests:
             cpu: 100m
