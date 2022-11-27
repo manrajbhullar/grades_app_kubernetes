@@ -23,7 +23,7 @@ spec:
         - name: DB_HOST
           valueFrom: 
             configMapKeyRef:
-              name: ga-entry-config
+              name: ga-entry-db-config
               key: DB_HOST
         resources:
           requests:

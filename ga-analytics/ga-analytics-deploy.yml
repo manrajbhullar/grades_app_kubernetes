@@ -19,6 +19,12 @@ spec:
         image: manrajbhullar/ga_analytics
         ports:
         - containerPort: 8100
+        env:
+        - name: DB_HOST1
+          valueFrom: 
+            configMapKeyRef:
+              name: ga-entry-db-config
+              key: DB_HOST
         resources:
           requests:
             cpu: 100m

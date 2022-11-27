@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ga-entry-config
-data:
-  DB_HOST: '34.123.191.186'
